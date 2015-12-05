@@ -22,7 +22,7 @@ TextUtil.prototype.getHTML = function() {
     } else
         out = this.text;
     return out;
-}
+};
 
 TextUtil.prototype.setSize = function(n) {
     this.size = n;
