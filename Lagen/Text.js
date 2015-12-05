@@ -1,15 +1,15 @@
 
 'use strict';
 
-var TextUtil = function(str) {
+var Text = function(str) {
     GlobalAttributes.call(this);
     this.text = str ? str : '';
     this.size = null;
     this.color = null;
 };
-TextUtil.prototype = Object.create(GlobalAttributes.prototype);
+Text.prototype = Object.create(GlobalAttributes.prototype);
 
-TextUtil.prototype.getHTML = function() {
+Text.prototype.getHTML = function() {
     var out;
     if (this.size || this.color) {
         out = '<font';
@@ -24,22 +24,22 @@ TextUtil.prototype.getHTML = function() {
     return out;
 };
 
-TextUtil.prototype.setSize = function(n) {
+Text.prototype.setSize = function(n) {
     this.size = n;
     return this;
 };
 
-TextUtil.prototype.setColor = function(n) {
+Text.prototype.setColor = function(n) {
     this.color = n;
     return this;
 };
 
-TextUtil.prototype.par = function() {
+Text.prototype.par = function() {
     this.text += '<p>';
     return this;
 };
 
-TextUtil.prototype.add = function(txt) {
+Text.prototype.add = function(txt) {
     this.text += txt;
     return this;
 };
