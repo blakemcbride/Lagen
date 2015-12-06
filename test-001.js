@@ -3,21 +3,21 @@
 
 new Application(function(){
 
-    Application.setTabText('tab text');
+    Application.setTabText('Tab Text');
     var body = new Body();
     var h = new Heading(1, "My Heading");
     h.align('center');
     body.add(h);
-    
-    var txt = new TextUtil('hello there');
+
+    var txt = new Text('Line 1');
     txt.setSize(4);
-    txt.par();
     body.add(txt);
-    
-    txt = new TextUtil('way fair');
-    txt.setSize(2).setClass('yyy');
+
+    txt = new Text('Line 2');
+    txt.setSize(2);
     txt.setColor('red');
     body.add(txt);
 
 });
+
 
